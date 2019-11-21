@@ -1,0 +1,137 @@
+template
+  require(from="./components/bs-tabs")
+  //- a(href="#presentation") haut de page
+  .page-section-pair(id="intro")
+    img.img-circle.mx-auto.d-block(srcset="./static/images/camille.jpg")
+    h2.pt-5
+      .line-1.anim-typewriter ${ 'hello' | t: {'name': 'Camille Moutte', 'job' : 'développeuse'}}
+  
+  .page-section-impair.text-center(id="resume")
+    h1.pb-5 ${'short_story' | t}
+    .flip-card
+      .flip-card-inner
+        .flip-card-front.mx-auto(style="margin:auto")
+          i.fa.fa-code(style="font-size: 60px; texte-align : center;")
+        .flip-card-back
+          h1 Langages
+          br
+          h3 JavaScript, Java EE, PHP, HTML/CSS, C#, Python, Ocaml.
+          
+    
+    .flip-card
+      .flip-card-inner
+        .flip-card-front.mx-auto(style="margin:auto")
+          i.fa.fa-database(aria-hidden="true" style="font-size: 60px; texte-align : center;")
+        .flip-card-back
+          h1 Base de données
+          h3 SQL, NoSql
+          h1 Moteur de recherche
+          h3 ElasticSearch, Algolia
+    
+    .flip-card
+      .flip-card-inner
+        .flip-card-front.mx-auto(style="margin:auto")
+          i.fa.fa-codepen(style="font-size: 60px; texte-align : center;")
+        .flip-card-back
+          h1 Framework
+          h3 Pug/Stylus, Struts2, Aurelia, HapiJs, NodeJs
+          h1 Environnement 
+          h3 NodeJs
+
+    .flip-card
+      .flip-card-inner
+        .flip-card-front.mx-auto(style="margin:auto")
+          i.fas.fa-code-branch(style="font-size: 60px; texte-align : center;")
+        .flip-card-back
+          h1 Gestion de version / Software versionning
+          h3 github and mercurial
+
+    br
+    .flip-card
+      .flip-card-inner
+        .flip-card-front.mx-auto(style="margin:auto")
+          i.fa.fa-server(style="font-size: 60px; texte-align : center;")
+        .flip-card-back
+          h1 Serveurs
+          h3 Java : Tomcat, Glassfish
+
+    .flip-card
+      .flip-card-inner
+        .flip-card-front.mx-auto(style="margin:auto")
+          i.fas.fa-project-diagram(aria-hidden="true" style="font-size: 60px; texte-align : center;")
+        .flip-card-back
+          h1 Gestion de projet
+          h3 agile
+          h1 Bonne compréhension des diagrammes UML
+
+    .flip-card
+      .flip-card-inner
+        .flip-card-front.mx-auto(style="margin:auto")
+          i.fa.fa-desktop(aria-hidden="true" style="font-size: 60px; texte-align : center;")
+        .flip-card-back
+          h1 OS
+          h3 Linux, Windows, Mac Os
+  .page-section-pair(id="presentation")
+    h1.text-center.pt-5 ${ 'presentation' | t }
+    h1 Mes Objectifs
+    h3 Développeuse de niveau intermédiaire en JavaScript et architecture logiciel, passionnée et prête à s'investir pour
+      
+  .page-section-impair(id="")
+    h1.text-center.pt-5 Mes expériences
+    //- Présentation/short story about me, Latest Project works/
+    h1 pour chaque entreprise
+    h1 Ce que Efrei Paris m'a apporté 
+    h1 QU'elle valeur tu as apporté
+    h1 qu'est ce que tu as fait 
+    h1 qu'est que tu as appris
+    
+  
+  .page-section-pair(id="school")
+    h1.text-center.pt-5.pb-5 Mes formations / schools
+    .card.mx-auto(style="width: 800px; color: black;")
+      .card-header
+        h1 Efrei Paris
+      .card-body
+        table.mt-3
+          tr
+            td
+            td Introduction à la cybersécurité
+          tr
+            td UML
+            td Implémentation d'un site de shopping en ligne, en JavaScript avec une base de donnée Algolia.
+
+    .card.mt-3.mx-auto(style="width: 800px; color: black;")
+      .card-header
+        h1 EPITA : Ecole pour l'Informatique et les Techniques Avancées
+      .card-body
+        p Linux
+
+
+
+  .page-section-impair(id="softskill")
+    h1.text-center.pb-5 Mes Mes Softskills / Mes savoirs être
+    .card.mx-auto.mt-5(style="width: 1000px;")
+      .card-body
+        bs-tabs
+          tab(header=" Persévérance")
+            table.mt-3
+              tr
+                td Compétitions de roller
+                td Lorsque j'ai commencé le roller de vitesse, j'étais en 6ème ce qui est dure de faire de la compétition, car il y a déjà des compétiteurs expérimentées.
+              tr
+                td En mathématique au lycée
+                td Quand je suis arrivée au lycée, le premier trimestre j'avais 6 de moyenne. A cette époque je voulais faire professeur de mathématique. Je voyais donc mon rêve sévaporer et aller dans une fillière scientifique. Je me suis accroché et j'ai fait tous les exercices du livre de mathématique. 
+
+          tab(header="Autonomie")
+            p page 2
+          tab(header="Adaptabilité")
+            p page 3
+
+
+
+  .page-section-pair(id="")
+    h1.text-center.pt-5 Mes Loisirs / Mes Hobbies
+
+  .page-section-impair(id="")
+    h1.text-center.pt-5 Me contacter
+       
