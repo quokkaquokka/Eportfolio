@@ -1,0 +1,9 @@
+{
+  "date_birth": "Date de naissance",
+  "location": "Localisation",
+  "name": "Nom",
+  "hello": "Bonjour, je suis {{name}}, {{job}}",
+  "presentation": "Présentation",
+  "short_story": "Résumé",
+  "score": "Score: {{score}}"
+}

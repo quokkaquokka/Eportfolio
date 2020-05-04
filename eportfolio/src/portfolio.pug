@@ -1,0 +1,192 @@
+template
+	require(from="./general-info")
+	.content_container(scrolltop.bind="scrollTop" scroll.trigger="handleScrollEvent($event)")
+		.main_content_outer.d-flex.flex-xl-row.flex-column.align-items-start.justify-content-start
+			general-info
+			.main_content
+				.main_title_container.d-flex.flex-column.align-items-start.justify-content-end
+					.main_subtitle ${data.subtitle}
+					.main_title ${data.title}
+				br
+				.general_info_title(style="color: #ff7597") Mes dessins
+				div.d-inline-block.mr-3(id="carouselIndicators" class="carousel slide" data-ride="carousel" style="width: 300px;")
+					ol.carousel-indicators
+						li(data-target="#carouselIndicators" data-slide-to="0" class="active")
+						li(data-target="#carouselIndicators" data-slide-to="1")
+						li(data-target="#carouselIndicators" data-slide-to="2")
+						li(data-target="#carouselIndicators" data-slide-to="3")
+						li(data-target="#carouselIndicators" data-slide-to="4")
+						li(data-target="#carouselIndicators" data-slide-to="5")
+						li(data-target="#carouselIndicators" data-slide-to="6")
+						li(data-target="#carouselIndicators" data-slide-to="7")
+					div.carousel-inner
+						div.carousel-item.active
+							img.d-block.w-100(src="images/port.jpg" alt="First slide")
+							div.carousel-caption.d-none.d-md-block
+								h3 Bateaux
+								p 2009
+						div.carousel-item
+							img.d-block.w-100(src="images/boat2.jpg" alt="Second slide")
+						div.carousel-item
+							img.d-block.w-100(src="images/boat.jpg" alt="Third slide")
+						div.carousel-item
+							img.d-block.w-100(src="images/port2.jpg" alt="Four slide")
+						div.carousel-item
+							img.d-block.w-100(src="images/boat3.jpg" alt="Sixt slide")
+						div.carousel-item
+							img.d-block.w-100(src="images/boat4.jpg" alt="Five slide")
+						div.carousel-item
+							img.d-block.w-100(src="images/house.jpg" alt="Five slide")
+						
+						div.carousel-item
+							img.d-block.w-100(src="images/house2.jpg" alt="Four slide")
+					a(class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev")
+						span.carousel-control-prev-icon(aria-hidden="true")
+						span.sr-only Previous
+					a(class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next")
+						span.carousel-control-next-icon(aria-hidden="true")
+						span.sr-only Next
+				div.d-inline-block.mr-3(id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width: 300px;")
+					ol.carousel-indicators
+						li(data-target="#carouselExampleIndicators" data-slide-to="0" class="active")
+						li(data-target="#carouselExampleIndicators" data-slide-to="1")
+						li(data-target="#carouselExampleIndicators" data-slide-to="2")
+						li(data-target="#carouselExampleIndicators" data-slide-to="3")
+						li(data-target="#carouselExampleIndicators" data-slide-to="4")
+						li(data-target="#carouselExampleIndicators" data-slide-to="5")
+						li(data-target="#carouselExampleIndicators" data-slide-to="6")
+					div.carousel-inner
+						div.carousel-item.active
+							img.d-block.w-100(src="images/pointe_raz.jpg" alt="First slide")
+							div.carousel-caption.d-none.d-md-block
+								h3 Paysage
+								p 2011
+						div.carousel-item
+							img.d-block.w-100(src="images/pont-scorf.jpg" alt="Second slide")
+						div.carousel-item
+							img.d-block.w-100(src="images/pont-scorf2.jpg" alt="Third slide")
+						div.carousel-item
+							img.d-block.w-100(src="images/lanvaudan-2011.jpg" alt="Four slide")
+						div.carousel-item
+							img.d-block.w-100(src="images/rose.jpg" alt="Five slide")
+						div.carousel-item
+							img.d-block.w-100(src="images/tree-2009.jpg" alt="Four slide")
+					a(class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev")
+						span.carousel-control-prev-icon(aria-hidden="true")
+						span.sr-only Previous
+					a(class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next")
+						span.carousel-control-next-icon(aria-hidden="true")
+						span.sr-only Next
+				div.d-inline-block(id="carouselExampleIndicator" class="carousel slide" data-ride="carousel" style="width: 300px;")
+					ol.carousel-indicators
+						li(data-target="#carouselExampleIndicator" data-slide-to="0" class="active")
+						li(data-target="#carouselExampleIndicator" data-slide-to="1")
+						li(data-target="#carouselExampleIndicator" data-slide-to="2")
+						li(data-target="#carouselExampleIndicator" data-slide-to="3")
+						li(data-target="#carouselExampleIndicator" data-slide-to="4")
+					div.carousel-inner
+						div.carousel-item.active
+							img.d-block.w-100(src="images/danse.jpg" alt="Four slide")
+							
+							div.carousel-caption.d-none.d-md-block
+								h3 Personnages
+								p 
+						div.carousel-item
+							img.d-block.w-100(src="images/venise-2009.jpg" alt="First slide")
+						div.carousel-item
+							img.d-block.w-100(src="images/fee-2009.jpg" alt="Second slide")
+						div.carousel-item
+							img.d-block.w-100(src="images/perso1.jpg" alt="Third slide")
+					a(class="carousel-control-prev" href="#carouselExampleIndicator" role="button" data-slide="prev")
+						span.carousel-control-prev-icon(aria-hidden="true")
+						span.sr-only Previous
+					a(class="carousel-control-next" href="#carouselExampleIndicator" role="button" data-slide="next")
+						span.carousel-control-next-icon(aria-hidden="true")
+						span.sr-only Next
+				.general_info_title.mt-5(style="color: #ff7597") Mes voyages
+				div.d-inline-block.mr-3(id="carouselIndicatos" class="carousel slide" data-ride="carousel" style="width: 300px;")
+					ol.carousel-indicators
+						li(data-target="#carouselIndicatos" data-slide-to="0" class="active")
+						li(data-target="#carouselIndicatos" data-slide-to="1")
+						li(data-target="#carouselIndicatos" data-slide-to="2")
+						li(data-target="#carouselIndicatos" data-slide-to="3")
+						li(data-target="#carouselIndicatos" data-slide-to="4")
+						li(data-target="#carouselIndicatos" data-slide-to="5")
+						li(data-target="#carouselIndicatos" data-slide-to="6")
+						li(data-target="#carouselIndicatos" data-slide-to="7")
+					div.carousel-inner
+						div.carousel-item.active
+							img.d-block.w-100(src="images/canada6.JPG" alt="First slide")
+							div.carousel-caption.d-none.d-md-block
+								h3(style="color: black;") Canada
+								p 
+						div.carousel-item
+							img.d-block.w-100(src="images/canada2.jpg" alt="Second slide")
+						div.carousel-item
+							img.d-block.w-100(src="images/canada3.jpg" alt="Third slide")
+						div.carousel-item
+							img.d-block.w-100(src="images/canada4.jpg" alt="Four slide")
+						div.carousel-item
+							img.d-block.w-100(src="images/canada8.jpg" alt="Sixt slide")
+						div.carousel-item
+							img.d-block.w-100(src="images/canada7.JPG" alt="Five slide")
+						div.carousel-item
+							img.d-block.w-100(src="images/canada9.jpg" alt="Five slide")
+						
+						div.carousel-item
+							img.d-block.w-100(src="images/canada1.jpg" alt="Four slide")
+					a(class="carousel-control-prev" href="#carouselIndicatos" role="button" data-slide="prev")
+						span.carousel-control-prev-icon(aria-hidden="true")
+						span.sr-only Previous
+					a(class="carousel-control-next" href="#carouselIndicatos" role="button" data-slide="next")
+						span.carousel-control-next-icon(aria-hidden="true")
+						span.sr-only Next
+				div.d-inline-block.mr-3(id="carousels" class="carousel slide" data-ride="carousel" style="width: 300px;")
+					ol.carousel-indicators
+						li(data-target="#carousels" data-slide-to="0" class="active")
+						li(data-target="#carousels" data-slide-to="1")
+						li(data-target="#carousels" data-slide-to="2")
+						li(data-target="#carousels" data-slide-to="3")
+						li(data-target="#carousels" data-slide-to="4")
+						li(data-target="#carousels" data-slide-to="5")
+						li(data-target="#carousels" data-slide-to="6")
+						li(data-target="#carousels" data-slide-to="7")
+					div.carousel-inner
+						div.carousel-item.active
+							img.d-block.w-100(src="images/ecosse4.JPG" alt="First slide")
+							div.carousel-caption.d-none.d-md-block
+								h3(style="color: black;") Ecosse
+								p 
+						div.carousel-item
+							img.d-block.w-100(src="images/ecosse1.jpg" alt="Second slide")
+						div.carousel-item
+							img.d-block.w-100(src="images/ecosse2.JPG" alt="Third slide")
+						div.carousel-item
+							img.d-block.w-100(src="images/ecosse3.JPG" alt="Four slide")
+						div.carousel-item
+							img.d-block.w-100(src="images/ecosse4.JPG" alt="Sixt slide")
+						div.carousel-item
+							img.d-block.w-100(src="images/ecosse5.JPG" alt="Five slide")
+						div.carousel-item
+							img.d-block.w-100(src="images/ecosse6.JPG" alt="Five slide")
+						
+						div.carousel-item
+							img.d-block.w-100(src="images/ecosse7.JPG" alt="Four slide")
+					a(class="carousel-control-prev" href="#carousels" role="button" data-slide="prev")
+						span.carousel-control-prev-icon(aria-hidden="true")
+						span.sr-only Previous
+					a(class="carousel-control-next" href="#carousels" role="button" data-slide="next")
+						span.carousel-control-next-icon(aria-hidden="true")
+						span.sr-only Next
+
+			//- .edu_title Canada
+				div.horizontal-scroll-wrapper.squares
+					div item 1
+						img.d-block.w-100(src="images/danse.jpg" alt="Four slide")
+					div item 2
+						img.d-block.w-100(src="images/danse.jpg" alt="Four slide")
+					div item 3
+						img.d-block.w-100(src="images/danse.jpg" alt="Four slide")
+
+
+				

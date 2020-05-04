@@ -1,0 +1,30 @@
+template
+	require(from="./general-info")
+	.content_container(scrolltop.bind="scrollTop" scroll.trigger="handleScrollEvent($event)")
+		.main_content_outer.d-flex.flex-xl-row.flex-column.align-items-start.justify-content-start
+			general-info
+			.main_content
+				.main_title_container.d-flex.flex-column.align-items-start.justify-content-end
+					.main_subtitle ${data.subtitle}
+					.main_title ${data.title}
+				.main_content_scroll.mCustomScrollbar(data-mcs-theme="minimal-dark")
+					.education(repeat.for="experience of data.experiences")
+						.edu_item.d-flex.flex-lg-row.flex-column.align-items-start.justfy-content-start
+							.edu_year ${experience.time}
+							.col-1.edu_image
+								img(src="${experience.img}")
+							.edu_content
+								.edu_title_container
+									.edu_title ${experience.title}
+									.edu_subtitle ${experience.subtitle}
+								.edu_text
+									p
+										div(id="${experience.id}" style="color:#D3D3D3")
+									p
+										div(id="${experience.id2}")
+									p
+										div(id="${experience.id3}")
+										span.badge.badge-pill.badge.mr-1(id="${pill.id}" style="color:black;" repeat.for="pill of experience.pills") ${pill.text}
+										br
+										span.badge.badge-pill.badge.mr-1(id="${pill.id}" style="color:black;" repeat.for="pill of experience.softs") ${pill.text}
+									

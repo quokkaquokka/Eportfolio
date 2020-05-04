@@ -1,0 +1,18 @@
+template
+  .super_container(style="padding:0;")
+    nav(class="navbar navbar-expand-lg navbar-dark" role="navigation")
+      ul(class="nav navbar-nav ml-auto")
+        li(repeat.for="row of router.navigation" class="navbar-nav"  class="${row.isActive ? 'active' : ''}")
+          a(href.bind="row.href" class="nav-link") ${row.title}
+
+    router-view
+
+//-
+    .header
+      .header_content.d-flex.flex-row.align-items-center.justify-content-start
+        .logo Smith
+          span .CV
+        .main_nav.d-flex.flex-row.align-items-end.justify-content-start
+          ul.d-flex.flex-row.align-items-center.justify-content-start
+            li(repeat.for="row of router.navigation" class="nav navbar-nav"  class="${row.isActive ? 'active' : ''}")
+              a(href.bind="row.href") ${title}

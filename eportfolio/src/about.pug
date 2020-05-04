@@ -1,0 +1,19 @@
+template
+	require(from="./general-info")
+	.content_container(scrolltop.bind="scrollTop" scroll.trigger="handleScrollEvent($event)")
+		.main_content_outer.d-flex.flex-xl-row.flex-column.align-items-start.justify-content-start
+			general-info
+			.main_content
+				.main_title_container.d-flex.flex-column.align-items-start.justify-content-end
+					.main_subtitle ${data.subtitle}
+					.main_title ${data.title}
+				.main_content_scroll.mCustomScrollbar(data-mcs-theme="minimal-dark")
+					.content
+						.text
+							p ${data.content}
+					.loaders.clearfix
+						div.loader_container(repeat.for="l of data.loaders" )
+							.loader(id.bind="l.id" click.delegate="l.link" data-perc.bind="l.dataPerc")
+							.loader_content.text-center
+								.loader_title ${l.title}
+								.loader_subtitle ${l.subtitle}
