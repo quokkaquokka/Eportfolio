@@ -1,8 +1,0 @@
-template
-  nav(class="navbar navbar-default navbar-fixed-top" role="navigation")
-    ul(class="nav navbar-nav navbar-right")
-      li(repeat.for="row of router.navigation" class="nav navbar-nav"  class="${row.isActive ? 'active' : ''}")
-        a(data-toggle="collapse" data-target="#navigation-navbar-collapse-1.in" href.bind="row.href") ${row.title}
-
-  div(class="page-host")
-    router-view
